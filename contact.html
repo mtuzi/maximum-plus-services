@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez Maximum Plus Services SARL - Demande de devis, renseignements. 52, Av. de la Gombe, Kinshasa.">
+  <title>Contact | Maximum Plus Services</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="images/LOGO.png">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Maximum Plus Services - Accueil">
+        <img src="images/LOGO.png" alt="Maximum Plus Services" style="height: 42px; width: auto;">
+        <div class="logo-text">
+          Maximum Plus
+          <span>Services</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">Qui sommes-nous</a>
+        <a href="services.html">Services</a>
+        <a href="security.html">Gardiennage</a>
+        <a href="contact.html" class="nav-cta active">Contact</a>
+      </div>
+      <button class="burger" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" role="navigation" aria-label="Navigation mobile">
+    <a href="index.html">Accueil</a>
+    <a href="about.html">Qui sommes-nous</a>
+    <a href="services.html">Nos Services</a>
+    <a href="security.html">Gardiennage</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- PAGE HERO -->
+  <header class="page-hero">
+    <div class="container">
+      <h1>Contactez-nous</h1>
+      <p>Nous sommes à votre écoute pour toute demande d'information ou de devis</p>
+    </div>
+  </header>
+
+  <!-- FORMULAIRE + INFOS -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Formulaire -->
+        <div class="fade-in">
+          <h2 style="font-size: 1.5rem; color: var(--primary); margin-bottom: 8px;">Envoyez-nous un message</h2>
+          <p style="color: var(--text-light); margin-bottom: 32px;">Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
+
+          <form id="contact-form" action="https://formspree.io/f/xyzgnqbk" method="POST">
+            <div class="form-group">
+              <label for="nom">Nom complet <span aria-hidden="true">*</span></label>
+              <input type="text" id="nom" name="nom" placeholder="Votre nom et prénom" required>
+              <span class="form-error" role="alert">Veuillez entrer votre nom.</span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label for="email">Email <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                <span class="form-error" role="alert">Email invalide.</span>
+              </div>
+              <div class="form-group">
+                <label for="telephone">Téléphone</label>
+                <input type="tel" id="telephone" name="telephone" placeholder="+243 XXX XXX XXX">
+                <span class="form-error" role="alert">Numéro invalide.</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="objet">Objet <span aria-hidden="true">*</span></label>
+              <select id="objet" name="objet" required>
+                <option value="" disabled selected>Sélectionnez un objet</option>
+                <option value="demande-de-devis">Demande de devis</option>
+                <option value="information">Demande d'information</option>
+                <option value="partenariat">Proposition de partenariat</option>
+                <option value="reclamation">Réclamation</option>
+                <option value="autre">Autre</option>
+              </select>
+              <span class="form-error" role="alert">Veuillez sélectionner un objet.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" placeholder="Décrivez votre demande en détail..." required></textarea>
+              <span class="form-error" role="alert">Veuillez entrer votre message.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="fichier">Pièce jointe (optionnel)</label>
+              <div class="file-input-wrapper">
+                <input type="file" id="fichier" name="fichier" accept=".pdf,.doc,.docx,.jpg,.jpeg,.png">
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i> Envoyer le message
+            </button>
+
+            <div class="form-success" role="status">
+              <i class="fas fa-check-circle" aria-hidden="true"></i>
+              Votre message a bien été envoyé. Nous vous répondrons dans les plus brefs délais.
+            </div>
+          </form>
+        </div>
+
+        <!-- Coordonnées -->
+        <div class="fade-in">
+          <div class="contact-info">
+            <h3>Nos coordonnées</h3>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-info-text">
+                <h4>Adresse</h4>
+                <p>52, Avenue de la Gombe<br>Immeuble LOMAMI<br>Commune de la Gombe, Kinshasa</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+              <div class="contact-info-text">
+                <h4>Téléphones</h4>
+                <p><a href="tel:+243999121012">+243 99 91 21 012</a></p>
+                <p><a href="tel:+243810592930">+243 81 05 92 930</a></p>
+                <p><a href="tel:+243808777648">+243 80 87 77 648</a></p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-info-text">
+                <h4>Email</h4>
+                <p><a href="mailto:maximumplus23@gmail.com">maximumplus23@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+              <div class="contact-info-text">
+                <h4>Horaires</h4>
+                <p>Lundi – Vendredi : 8h00 – 17h00<br>Samedi : 8h00 – 12h00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-container" style="margin-top: 24px;">
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=15.29,-4.32,15.32,-4.30&layer=mapnik&marker=-4.3110,15.3044"
+              title="Localisation de Maximum Plus Services à Kinshasa"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="color: #fff;">
+            <img src="images/LOGO.png" alt="Maximum Plus Services" style="height: 42px; width: auto;">
+            <div class="logo-text">
+              Maximum Plus
+              <span>Services</span>
+            </div>
+          </a>
+          <p>Entreprise de services professionnels en République Démocratique du Congo. La Qualité en premier.</p>
+        </div>
+        <div>
+          <h4>Liens rapides</h4>
+          <div class="footer-links">
+            <a href="index.html">Accueil</a>
+            <a href="about.html">Qui sommes-nous</a>
+            <a href="services.html">Services</a>
+            <a href="security.html">Gardiennage</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <div class="footer-links">
+            <a href="services.html">Cleaning</a>
+            <a href="services.html">Sous-traitance</a>
+            <a href="services.html">Catering</a>
+            <a href="services.html">Import / Export</a>
+            <a href="services.html">Études topographiques</a>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> 52, Av. de la Gombe, Commune de la Gombe</p>
+          <p><i class="fas fa-phone" aria-hidden="true"></i> +243 99 91 21 012</p>
+          <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:maximumplus23@gmail.com">maximumplus23@gmail.com</a></p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Maximum Plus Services SARL. Tous droits réservés. <a href="https://www.optimussarl.com" target="_blank" rel="noopener" style="color: rgba(255,255,255,0.6); text-decoration: underline;">Réalisé par OPTIMUS</a></span>
+        <span class="footer-ids">N° Impôt : A 2324866E | Id. Nat. : 01-F4300-M31951D | RCCM : CD/KNG/RCCM 23-M31951D</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
